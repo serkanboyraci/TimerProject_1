@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        kalanZaman = 15
+        kalanZaman = 10
         zamanLabel.text = "Zaman: \(kalanZaman)"
     }
 
@@ -35,13 +35,14 @@ class ViewController: UIViewController {
     }
     
     @objc func zamanlamaFonk () {
-        kalanZaman -=  1
+        
         zamanLabel.text = "Zaman: \(kalanZaman)"
+        kalanZaman -=  1
         
         if kalanZaman == 0 {
-            zamanLabel.text = "Süre Bitti!"
             timer.invalidate()
-            kalanZaman = 15
+            zamanLabel.text = "Süre Bitti!"
+            kalanZaman = 10
         }
         
         
