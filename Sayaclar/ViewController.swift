@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         zamanLabel.text = "Zaman: \(kalanZaman)"
 
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(zamanlamaFonk), userInfo: nil, repeats: true)
+        // BURASI ONEMLI
         // baslat tiklandiktan sonra tusu inaktif durumu getirmemiz gerekiyor. her bastiginda tekrar komut gidiyor ve sayac daha hizli calisiyor.
     }
     
